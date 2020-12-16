@@ -25,7 +25,7 @@ class FloatingHearts extends Component {
     this.setState({ hearts: this.state.hearts.filter(heart => heart.id !== id) })
   }
 
-  componentWillUpdate(nextProps) {
+  componentDidUpdate(nextProps) {
     const oldCount = this.props.count
     const newCount = nextProps.count
     const numHearts = newCount - oldCount
@@ -174,7 +174,7 @@ class AnimatedShape extends Component {
 AnimatedShape.propTypes = {
   height: PropTypes.number.isRequired,
   onComplete: PropTypes.func.isRequired,
-  style: View.propTypes.style,
+  style: PropTypes.style,
   children: PropTypes.node.isRequired,
 }
 
