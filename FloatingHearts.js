@@ -174,7 +174,7 @@ class AnimatedShape extends Component {
 AnimatedShape.propTypes = {
   height: PropTypes.number.isRequired,
   onComplete: PropTypes.func.isRequired,
-  style: PropTypes.style,
+  style: ViewPropTypes.style,
   children: PropTypes.node.isRequired,
 }
 
